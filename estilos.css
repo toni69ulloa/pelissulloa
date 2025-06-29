@@ -46,10 +46,6 @@ nav a {
   transition: opacity 1s ease-in-out;
 }
 
-.slide.active {
-  display: block;
-}
-
 .slide .content {
   background: rgba(0,0,0,0.5);
   padding: 20px;
@@ -91,7 +87,6 @@ nav a {
   background-color: red;
 }
 
-
 .galeria {
   padding: 40px 20px;
   background-color: #111;
@@ -112,22 +107,18 @@ nav a {
 }
 
 .pelicula {
+  background-color: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
   transition: transform 0.3s;
+  will-change: transform;
 }
 
 .pelicula:hover {
   transform: scale(1.03);
   z-index: 10;
   position: relative;
-}
-
-.pelicula {
-  background-color: #222;
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: center;
-  transition: transform 0.2s ease;
-  will-change: transform;
 }
 
 .pelicula img {
@@ -222,9 +213,6 @@ nav a {
     gap: 10px;
   }
 
-  
-
-@media (max-width: 768px) {
   .content {
     left: 20px;
     bottom: 40px;
@@ -248,9 +236,7 @@ nav a {
   .indicadores {
     bottom: 15px;
   }
-}
 
-@media (max-width: 768px) {
   .peliculas {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -267,27 +253,7 @@ nav a {
     font-size: 10px;
     padding: 2px 5px;
   }
-}
 
-@media (max-width: 480px) {
-  .peliculas {
-    grid-template-columns: 1fr;
-  }
-
-  .pelicula img {
-    height: 200px;
-  }
-
-  .content h2 {
-    font-size: 20px;
-  }
-
-  .content p {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 768px) {
   .buscador input {
     width: 90%;
     font-size: 14px;
@@ -305,7 +271,6 @@ nav a {
   }
 }
 
-/* Estilos del Modal */
 .modal {
   display: none;
   position: fixed;
@@ -328,6 +293,21 @@ nav a {
   text-align: center;
   color: white;
   position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0,0,0,0.9);
+  backdrop-filter: blur(4px);
+}
+
+.modal-contenido::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  z-index: -1;
+  filter: brightness(0.3);
+  border-radius: 10px;
 }
 
 .modal-contenido h2 {
@@ -405,23 +385,4 @@ nav a {
 
 .categorias button:hover {
   background: #e50914;
-}
-
-.modal-contenido {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: rgba(0,0,0,0.9); /* para overlay si lo quieres */
-  backdrop-filter: blur(4px); /* opcional para desenfoque */
-  position: relative;
-}
-
-.modal-contenido::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: inherit;
-  z-index: -1;
-  filter: brightness(0.3);
-  border-radius: 10px;
 }
