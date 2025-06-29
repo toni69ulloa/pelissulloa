@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>pelisulloa</title>
+  <title>Pelisulloa</title>
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
@@ -15,93 +15,86 @@
     <nav>
       <a href="#">Inicio</a>
       <a href="#">Series</a>
-      <a href="file:///C:/Users/toni6/Desktop/prueba/index.html">Películas</a>
+      <a href="index.html">Películas</a>
     </nav>
   </header>
 
   <section class="slider">
-  <div id="slider-contenido"></div>
-
-  <div class="controls">
-    <button onclick="anterior()">⟨</button>
-    <button onclick="siguiente()">⟩</button>
-  </div>
-
-  <div class="indicadores" id="indicadores"></div>
-</section>
+    <div id="slider-contenido"></div>
+    <div class="controls">
+      <button onclick="anterior()">⟨</button>
+      <button onclick="siguiente()">⟩</button>
+    </div>
+    <div class="indicadores" id="indicadores"></div>
+  </section>
 
   <section class="filtro-letras">
-  <h2>🔠 Filtrar por letra</h2>
-  <div class="letras">
-    <!-- Puedes duplicar o completar todo el abecedario -->
-    <button onclick="filtrarPorLetra('A')">A</button>
-    <button onclick="filtrarPorLetra('B')">B</button>
-    <button onclick="filtrarPorLetra('C')">C</button>
-    <button onclick="filtrarPorLetra('D')">D</button>
-    <button onclick="filtrarPorLetra('E')">E</button>
-    <button onclick="filtrarPorLetra('F')">F</button>
-    <button onclick="filtrarPorLetra('G')">G</button>
-    <button onclick="filtrarPorLetra('H')">H</button>
-    <button onclick="filtrarPorLetra('I')">I</button>
-    <button onclick="filtrarPorLetra('J')">J</button>
-    <button onclick="filtrarPorLetra('K')">K</button>
-    <button onclick="filtrarPorLetra('L')">L</button>
-    <button onclick="filtrarPorLetra('M')">M</button>
-    <button onclick="filtrarPorLetra('N')">N</button>
-    <button onclick="filtrarPorLetra('O')">O</button>
-    <button onclick="filtrarPorLetra('P')">P</button>
-    <button onclick="filtrarPorLetra('Q')">Q</button>
-    <button onclick="filtrarPorLetra('R')">R</button>
-    <button onclick="filtrarPorLetra('S')">S</button>
-    <button onclick="filtrarPorLetra('T')">T</button>
-    <button onclick="filtrarPorLetra('U')">U</button>
-    <button onclick="filtrarPorLetra('V')">V</button>
-    <button onclick="filtrarPorLetra('W')">W</button>
-    <button onclick="filtrarPorLetra('X')">X</button>
-    <button onclick="filtrarPorLetra('Y')">Y</button>
-    <button onclick="filtrarPorLetra('Z')">Z</button>
-    <button onclick="mostrarTodas()">TODAS</button>
-  </div>
-</section>
+    <h2>🔠 Filtrar por letra</h2>
+    <div class="letras">
+      <button onclick="filtrarPorLetra('A')">A</button>
+      <button onclick="filtrarPorLetra('B')">B</button>
+      <button onclick="filtrarPorLetra('C')">C</button>
+      <button onclick="filtrarPorLetra('D')">D</button>
+      <button onclick="filtrarPorLetra('E')">E</button>
+      <button onclick="filtrarPorLetra('F')">F</button>
+      <button onclick="filtrarPorLetra('G')">G</button>
+      <button onclick="filtrarPorLetra('H')">H</button>
+      <button onclick="filtrarPorLetra('I')">I</button>
+      <button onclick="filtrarPorLetra('J')">J</button>
+      <button onclick="filtrarPorLetra('K')">K</button>
+      <button onclick="filtrarPorLetra('L')">L</button>
+      <button onclick="filtrarPorLetra('M')">M</button>
+      <button onclick="filtrarPorLetra('N')">N</button>
+      <button onclick="filtrarPorLetra('O')">O</button>
+      <button onclick="filtrarPorLetra('P')">P</button>
+      <button onclick="filtrarPorLetra('Q')">Q</button>
+      <button onclick="filtrarPorLetra('R')">R</button>
+      <button onclick="filtrarPorLetra('S')">S</button>
+      <button onclick="filtrarPorLetra('T')">T</button>
+      <button onclick="filtrarPorLetra('U')">U</button>
+      <button onclick="filtrarPorLetra('V')">V</button>
+      <button onclick="filtrarPorLetra('W')">W</button>
+      <button onclick="filtrarPorLetra('X')">X</button>
+      <button onclick="filtrarPorLetra('Y')">Y</button>
+      <button onclick="filtrarPorLetra('Z')">Z</button>
+      <button onclick="mostrarTodas()">TODAS</button>
+    </div>
+  </section>
 
-<section class="categorias">
-  <h2>Categorías</h2>
-  <div class="botones-categorias">
-    <button onclick="filtrarCategoria('Acción')">Acción</button>
-    <button onclick="filtrarCategoria('Aventura')">Aventura</button>
-    <button onclick="filtrarCategoria('Comedia')">Comedia</button>
-    <button onclick="filtrarCategoria('Ciencia ficción')">Ciencia ficción</button>
-    <button onclick="filtrarCategoria('Drama')">Drama</button>
-    <button onclick="filtrarCategoria('Misterio')">Misterio</button>
-    <button onclick="filtrarCategoria('Suspenso')">Suspenso</button>
-    <button onclick="filtrarCategoria('Terror')">Terror</button>
-    <button onclick="filtrarCategoria('Western')">Western</button>
-    <button onclick="mostrarTodasCategorias()">Todas</button>
-  </div>
-</section>
+  <section class="categorias">
+    <h2>Categorías</h2>
+    <div class="botones-categorias">
+      <button onclick="filtrarCategoria('Acción')">Acción</button>
+      <button onclick="filtrarCategoria('Aventura')">Aventura</button>
+      <button onclick="filtrarCategoria('Comedia')">Comedia</button>
+      <button onclick="filtrarCategoria('Ciencia ficción')">Ciencia ficción</button>
+      <button onclick="filtrarCategoria('Drama')">Drama</button>
+      <button onclick="filtrarCategoria('Misterio')">Misterio</button>
+      <button onclick="filtrarCategoria('Suspenso')">Suspenso</button>
+      <button onclick="filtrarCategoria('Terror')">Terror</button>
+      <button onclick="filtrarCategoria('Western')">Western</button>
+      <button onclick="mostrarTodasCategorias()">Todas</button>
+    </div>
+  </section>
 
   <section class="galeria">
-  <h2>🎬 Movies</h2>
-  <div class="peliculas">
+    <h2>🎬 películas</h2>
+    <div class="peliculas">
+      <div class="pelicula"
+        data-fondo="https://image.tmdb.org/t/p/original/e5MlN03JvbpTqq2dsW3H2VUTU4s.jpg"
+        data-categoria="Aventura,Ciencia ficción,Misterio"
+        data-sinopsis="El único sobreviviente de una misión de rescate interplanetario busca al único sobreviviente de la expedición anterior. Descubre un planeta gobernado por simios y una ciudad subterránea dirigida por humanos telepáticos."
+        onclick='abrirModal("Bajo el planeta de los simios", [ { nombre: "Uqload", url: "https://short.icu/veHgNRQhR" } ])'>
+        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wNh22vYIfd2Xr6zBoh8ZQGivt1L.jpg" alt="Película 1">
+        <div class="etiquetas">
+          <span class="calidad">HD</span>
+          <span class="idioma">LAT</span>
+          <span class="año">1970</span>
+        </div>
+        <h3>Bajo el planeta de los simios</h3>
+      </div>
 
-    <div class="pelicula"
-     data-fondo="https://image.tmdb.org/t/p/original/e5MlN03JvbpTqq2dsW3H2VUTU4s.jpg"
-     data-categoria="Aventura,Ciencia ficción,Misterio"
-     data-sinopsis="El único sobreviviente de una misión de rescate interplanetario busca al único sobreviviente de la expedición anterior. Descubre un planeta gobernado por simios y una ciudad subterránea dirigida por humanos telepáticos."
-     onclick="abrirModal('Bajo el planeta de los simios', [ 
-       { nombre: 'Uqload', url: 'https://short.icu/veHgNRQhR' }
-     ])">
-  <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wNh22vYIfd2Xr6zBoh8ZQGivt1L.jpg" alt="Película 1">
-  <div class="etiquetas">
-    <span class="calidad">HD</span>
-    <span class="idioma">LAT</span>
-    <span class="año">1970</span>
-  </div>
-  <h3>Bajo el planeta de los simios</h3>
-</div>
-
-    
-    <div class="pelicula"
+        <div class="pelicula"
      data-fondo="https://image.tmdb.org/t/p/original/58pMrmwwcKamJIdjUlinE6QX1Fs.jpg" 
      data-categoria="Acción,Aventura,Suspenso"
      data-sinopsis="El agente británico 007, que en esta ocasión se asocia a un mafioso, para unir sus fuerzas en la lucha contra la malvada organización Spectre. Ambientada en los alpes suizos, el malvado Stavro Blofeld -Savalas amenaza al mundo entero con un malvado plan: desarrollar y lanzar una peligrosa bacteria que podría acabar con millones de personas en todo el planeta." 
@@ -170,7 +163,7 @@
     data-categoria="Aventura,Ciencia ficción,Misterio"
     data-sinopsis="La historia de la humanidad, en diversos estadios del pasado y del futuro, es narrada en la película de ciencia-ficción de culto por excelencia de la historia del cine. Hace millones de años, en los albores del nacimiento del homo sapiens, unos simios descubren un monolito que les lleva a un estadio de inteligencia superior. Otro monolito vuelve a aparecer, millones de años después, enterrado en una luna, lo que provoca el interés de los científicos humanos. Por último, HAL 9000, una máquina de inteligencia artificial, es la encargada de todos los sistemas de una nave espacial tripulada durante una misión de la NASA." 
     onclick="abrirModal('2001: Odisea del Espacio', [
-      { nombre: 'Uqload', url: 'https://short.icu/xx0jukj6F' },
+      { nombre: 'Uqload', url: 'https://short.icu/6a86qw3lF' },
     ])">
   <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sln50uQYigvu5AvN72JfYfu1ckq.jpg" alt="Película 1">
   <div class="etiquetas">
@@ -500,30 +493,22 @@
   <h3>Ahí está el detalle</h3>
 </div>
 
-    <!-- Puedes copiar y pegar más bloques .pelicula aquí -->
+    </div>
+  </section>
 
+  <div id="paginacion" class="paginacion"></div>
+
+  <div id="modal" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarModal()">&times;</span>
+      <h2 id="modalTitulo">Título de la película</h2>
+      <p id="modalSinopsis" style="margin: 10px 0; font-style: italic;"></p>
+      <div id="servidores" class="servidores"></div>
+      <iframe id="modalVideo" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
   </div>
-</section>
-
-<!-- PAGINACIÓN -->
-<div id="paginacion" class="paginacion"></div>
 
   <script src="script.js"></script>
-
-    <!-- Modal de Reproductor con múltiples servidores -->
-<div id="modal" class="modal">
-  <div class="modal-contenido">
-    <span class="cerrar" onclick="cerrarModal()">×</span>
-    <h2 id="modalTitulo">Título de la película</h2>
-     <p id="modalSinopsis" style="margin: 10px 0; font-style: italic;"></p>
-  <div id="servidores" class="servidores">
-      <!-- Los botones se generarán con JavaScript -->
-    </div>
-
-    <iframe id="modalVideo" src="" frameborder="0" allowfullscreen></iframe>
-  </div>
-</div>
-
 
 </body>
 </html>
