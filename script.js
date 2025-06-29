@@ -1,14 +1,20 @@
+// script.js corregido para películas
+
+const peliculasPorPagina = 24;
+let paginaActual = 1;
+let slideIndex = 0;
+
 function filtrarPorLetra(letra) {
   const peliculas = document.querySelectorAll(".pelicula");
   peliculas.forEach(peli => {
     const titulo = peli.querySelector("h3").textContent.toUpperCase();
-    peli.style.display = titulo.startsWith(letra) ? "block" : "none";
+    peli.style.display = titulo.startsWith(letra) ? "inline-block" : "none";
   });
 }
 
 function mostrarTodas() {
   document.querySelectorAll(".pelicula").forEach(peli => {
-    peli.style.display = "block";
+    peli.style.display = "inline-block";
   });
 }
 
@@ -20,7 +26,7 @@ function buscarPeliculas() {
     const titulo = peli.querySelector("h3").textContent.toLowerCase();
     const año = peli.querySelector(".año")?.textContent.toLowerCase();
 
-    peli.style.display = (titulo.includes(texto) || año.includes(texto)) ? "block" : "none";
+    peli.style.display = (titulo.includes(texto) || año.includes(texto)) ? "inline-block" : "none";
   });
 }
 
@@ -34,7 +40,7 @@ function abrirModal(titulo, servidores) {
   document.getElementById("modalSinopsis").textContent = sinopsis;
 
   const fondo = peli?.getAttribute("data-fondo") || "";
-document.querySelector(".modal-contenido").style.backgroundImage = `url('${fondo}')`;
+  document.querySelector(".modal-contenido").style.backgroundImage = `url('${fondo}')`;
 
   const contenedor = document.getElementById("servidores");
   contenedor.innerHTML = "";
@@ -57,9 +63,6 @@ function cerrarModal() {
   document.getElementById("modal").style.display = "none";
   document.getElementById("modalVideo").src = "";
 }
-
-const peliculasPorPagina = 24;
-let paginaActual = 1;
 
 function paginarPeliculas() {
   const todasLasPeliculas = document.querySelectorAll(".pelicula");
@@ -166,9 +169,8 @@ function mostrarTodasCategorias() {
   });
 }
 
-// Al cargar la página
 document.addEventListener("DOMContentLoaded", () => {
   paginarPeliculas();
-  cargarCarrusel();
+  cargarCarrusel(); // Esto inicializa el carrusel
   setInterval(() => mostrarSlide(slideIndex + 1), 8000);
 });
